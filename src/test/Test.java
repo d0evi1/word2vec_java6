@@ -7,7 +7,9 @@ import com.ansj.vec.Word2VEC;
 public class Test {
     public static void main(String[] args) throws IOException {
         Word2VEC w1 = new Word2VEC() ;
+        w1.setTopNSize(10);
         w1.loadGoogleModel("library/output.bin") ;
+        
         
         System.out.println(w1.distance("巴西"));
         
